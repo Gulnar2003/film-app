@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+.container-fluid {
+  width: 85%; 
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-app {
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container {
+  position: relative;
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container:hover {
+  transform: scale(1.05);
 }
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay:hover {
+  background-color:crimson;
+}
+
+.overlay svg {
+  width: 24px;
+  height: 24px;
+  fill: red;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.overlay:hover svg {
+  transform: scale(1.2);
+  fill: white;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: dodgerblue;
+}
+
+
